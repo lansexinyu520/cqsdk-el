@@ -1,0 +1,35 @@
+{
+    "ret":1,
+    "apiver":9,
+    "appid":"com.coxxs.status",
+    "name":"状态监控",
+    "version":"1.0.4",
+    "version_id":5,
+    "author":"Coxxs",
+    "description":"显示酷Q运行状态",
+    "event":[
+        {
+			"id":1001,
+            "type":1001,
+            "name":"酷Q启动事件",
+            "priority":30000,
+            "function":"_eventStartup"
+        }
+    ],
+    "status":[
+        {
+            "id":1,
+            "name":"运行时间",
+            "title":"UPTIME",
+            "function":"_statusUptime",
+            "period":"1000"
+        },
+        {
+            "id":2,
+            "name":"CPU使用率",
+            "title":"CPU",
+            "function":"_statusCPU",
+            "period":"1000"
+        }
+    ]
+}
